@@ -1,5 +1,9 @@
 package io.antal.rest;
 
+import io.antal.rest.application.InMemoryRestDao;
+import io.antal.rest.util.ExceptionHandler;
+import io.antal.rest.util.RestController;
+import io.antal.rest.util.WebApplicationExceptionHandler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -17,6 +21,9 @@ public class Application {
             AppConfig appConfig = new AppConfig.Builder()
                     .withPort(8080)
                     .addController(StatusController.class)
+                    .addController(CountryCollectionController.class)
+                    .addController(ExceptionHandler.class)
+                    .addController(WebApplicationExceptionHandler.class)
                     .build();
             appConfig.start();
             appConfig.join();

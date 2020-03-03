@@ -8,7 +8,8 @@ apply plugin: "maven"
 group 'org.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -27,6 +28,12 @@ dependencies {
     compile('org.eclipse.jetty:jetty-servlet:9.4.20.v20190813')
     compile('org.eclipse.jetty:jetty-server:9.4.20.v20190813')
     compile('org.eclipse.jetty:jetty-util:9.4.20.v20190813')
+
+    /* XML */
+    compile('javax.xml.bind:jaxb-api:2.3.1')
+    compile('com.sun.xml.bind:jaxb-core:2.3.0')
+    compile('com.sun.xml.bind:jaxb-impl:2.3.0')
+    runtime('org.glassfish.jaxb:jaxb-runtime:2.3.1')
 
     /* Utilities */
     compile('io.codecastle.scriptorium:scriptorium-json:1.0.1')

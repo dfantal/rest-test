@@ -10,7 +10,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 @JsonSerialize(using = ToStringSerializer.class)
-@JsonDeserialize(using = FromStringDeserializer.class, )
+
 public class Country {
 
     private final String name;
