@@ -16,3 +16,6 @@ products for France. The collection has attributes like name, the list of things
 country it is for etc., The collection has to be localized for different languages.
 Some countries like the US has only English. But a country like Canada will have
 in English and French.
+
+To Run
+Run the main method of io.antal.rest.Application
